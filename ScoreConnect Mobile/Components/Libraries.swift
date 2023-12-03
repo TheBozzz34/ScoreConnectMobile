@@ -19,7 +19,7 @@ struct Library: Identifiable {
 struct Libraries: View {
     let libraries: [Library] = [
         Library(name: "SwiftUI", version: "5.9.1", description: "Declarative UI framework by Apple", url: "https://www.swift.org/"),
-        Library(name: "Starscream", version: "5.5.1", description: "Starscream is a conforming WebSocket (RFC 6455) library in Swift.", url: "https://github.com/daltoniam/Starscream"),
+        Library(name: "Starscream", version: "4.0.6", description: "Starscream is a conforming WebSocket (RFC 6455) library in Swift.", url: "https://github.com/daltoniam/Starscream"),
         Library(name: "FirebaseAnalytics", version: "10.18.0", description: "Firebase Analytics is a free, out-of-the-box analytics solution that inspires actionable insights based on app usage and user engagement.", url: "https://firebase.google.com"),
         Library(name: "FirebaseCore", version: "10.18.0", description: "Firebase is an app development platform with tools to help you build, grow and monetize your app", url: "firebase.google.com"),
         Library(name: "ExytePopupView", version: "2.8.3", description: "Toasts, alerts and popups library written with SwiftUI", url: "https://github.com/exyte/PopupView")

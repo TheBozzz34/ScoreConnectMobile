@@ -41,17 +41,25 @@ class WebSocketDelegateWrapper: ObservableObject, WebSocketDelegate {
     @Published var receivedMessages: [String] = []
     @Published var deviceDataManager = DeviceDataManager(deviceData: DeviceData(deviceID: "", deviceName: "", deviceType: "", deviceStatus: "", deviceData: "", deviceCommands: "", teamAName: "", teamBName: "", teamAScore: "", teamBScore: ""))
     
-    func isValidJSON(_ jsonString: String) -> Bool {
-        if let data = jsonString.data(using: .utf8) {
-            do {
-                let _ = try JSONSerialization.jsonObject(with: data, options: [])
-                return true
-            } catch {
-                return false
-            }
+    func prettyPrintMessage(_ message: Message) -> String? {
+        guard let jsonData = message.text.data(using: .utf8) else {
+            return nil
         }
-        return false
+        
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let prettyPrintedData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
+            
+            if let prettyPrintedString = String(data: prettyPrintedData, encoding: .utf8) {
+                return prettyPrintedString
+            } else {
+                return nil
+            }
+        } catch {
+            return nil
+        }
     }
+
 
 
     func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) {
@@ -60,30 +68,28 @@ class WebSocketDelegateWrapper: ObservableObject, WebSocketDelegate {
         case .connected(_):
             isConnected = true
             print("WebSocket is connected")
-            // You can perform actions when the WebSocket is connected
         case .disconnected(_, _):
             isConnected = false
             print("WebSocket is disconnected")
-            // You can handle reconnection logic if needed
         case .text(let string):
-            print("Received message: \(string)")
-            receivedMessages.append(string)
-            
             do {
                 let jsonData = Data(string.utf8)
                 let decodedMessage = try JSONDecoder().decode(Message.self, from: jsonData)
+            
                 
                 switch decodedMessage.type {
                 case 18:
                     let textData = decodedMessage.text.data(using: .utf8) ?? Data()
                     if let receivedDeviceData = try? JSONDecoder().decode(DeviceData.self, from: textData) {
                         deviceDataManager.deviceData = receivedDeviceData
-                        print("Setting Device Data")
+                        print("Received message: \(prettyPrintMessage(decodedMessage) ?? "Unknown Message ")")
+                        receivedMessages.append(prettyPrintMessage(decodedMessage) ?? "Unknown Message ")
                     } else {
                         print("Invalid device data")
                     }
                 default:
-                    break
+                    print("Received message: \(decodedMessage.text)")
+                    receivedMessages.append("Received message: \(decodedMessage.text)")
                 }
             } catch {
                 print("Error decoding JSON: \(error)")

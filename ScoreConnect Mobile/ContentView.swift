@@ -8,7 +8,8 @@
 import SwiftUI
 import Starscream
 import FirebaseCore
-import FirebaseAuth
+import Foundation
+import FirebaseAnalytics
 
 
 struct ContentView: View {
@@ -102,11 +103,19 @@ struct ContentView: View {
                 Button(action: sendTestMessage) {
                     Label("Test Test Message", systemImage: "arrow.up")
                 }
+                }
                 .buttonStyle(RoundedButtonStyle()) // Apply the custom button style
 
                 .sheet(isPresented: $isShowingCredits) {
                               Libraries()
-                          }
+                }
+            
+            Button("Send Test Analytics Event") {
+                Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                  AnalyticsParameterItemID: "test",
+                  AnalyticsParameterItemName: "test",
+                  AnalyticsParameterContentType: "cont",
+                ])
 
 
             }

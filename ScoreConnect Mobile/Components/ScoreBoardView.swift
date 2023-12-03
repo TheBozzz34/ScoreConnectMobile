@@ -136,6 +136,7 @@ struct TeamScoreView: View {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Button {
                                         self.showingPopup = false
+                                        
                                     } label: {
                                         Text("Save")
                                             // .frame(width: 112, height: 40)

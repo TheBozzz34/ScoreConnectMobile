@@ -16,6 +16,7 @@
 		9E44E4B12B1CE4AA00A18D97 /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */; };
 		9E44E4B32B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44E4B22B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift */; };
 		9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */; };
+		9E739A092B1CEEEA00DB94C4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E739A082B1CEEEA00DB94C4 /* AdSupport.framework */; };
 		9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9303442B1BD80B001F85DC /* DeviceDataView.swift */; };
 		9E9303472B1BE628001F85DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9303462B1BE628001F85DC /* GoogleService-Info.plist */; };
 		D7688A0208A78C14E9793A8A /* Pods_ScoreConnect_MobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */; };
@@ -55,6 +56,7 @@
 		9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
 		9E44E4B22B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketDelegateWrapper.swift; sourceTree = "<group>"; };
 		9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
+		9E739A082B1CEEEA00DB94C4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E9303442B1BD80B001F85DC /* DeviceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataView.swift; sourceTree = "<group>"; };
 		9E9303462B1BE628001F85DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScoreConnect-Mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -69,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8633A7C6A84E1A03592D3B /* Pods_ScoreConnect_Mobile.framework in Frameworks */,
+				9E739A092B1CEEEA00DB94C4 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +163,7 @@
 		D54A6B962D584690B96F955A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E739A082B1CEEEA00DB94C4 /* AdSupport.framework */,
 				C1BF4A61D1F757B01B628354 /* Pods_ScoreConnect_Mobile.framework */,
 				6D5AA1D4818BD2C226B11F19 /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework */,
 				182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */,
