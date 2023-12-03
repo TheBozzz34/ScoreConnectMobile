@@ -12,6 +12,7 @@ target 'ScoreConnect Mobile' do
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
+  pod 'ExytePopupView'
 
 
   target 'ScoreConnect MobileTests' do

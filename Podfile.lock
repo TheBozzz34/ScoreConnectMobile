@@ -5,6 +5,7 @@ PODS:
   - AppAuth/Core (1.6.2)
   - AppAuth/ExternalUserAgent (1.6.2):
     - AppAuth/Core
+  - ExytePopupView (2.8.3)
   - FirebaseAnalytics (10.18.0):
     - FirebaseAnalytics/AdIdSupport (= 10.18.0)
     - FirebaseCore (~> 10.0)
@@ -101,6 +102,7 @@ PODS:
   - Starscream (4.0.6)
 
 DEPENDENCIES:
+  - ExytePopupView
   - FirebaseAnalytics
   - FirebaseAuth
   - GoogleSignIn
@@ -110,6 +112,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppAuth
+    - ExytePopupView
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
     - FirebaseAuth
@@ -129,6 +132,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
+  ExytePopupView: f71a9ede978b4e80fc477553aebac4777819f49a
   FirebaseAnalytics: 4d310b35c48eaa4a058ddc04bdca6bdb5dc0fe80
   FirebaseAppCheckInterop: 3cd914842ba46f4304050874cd284de82f154ffd
   FirebaseAuth: 12314b438fa76048540c8fb86d6cfc9e08595176
@@ -146,6 +150,6 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
 
-PODFILE CHECKSUM: fae12c5cf0a3d19f7d7b21002f00c2751243c28a
+PODFILE CHECKSUM: 82e9284bd747a4480cac2259819f5c23c9b0573a
 
 COCOAPODS: 1.14.3
