@@ -169,57 +169,41 @@ struct ContentView: View {
 
 
     var body: some View {
-        Text("ScoreConnect iOS")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .padding()
-            .padding()
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            
-            Text("Websocket connected: \(webSocketDelegate.isConnected ? "Yes" : "No")")
-            
-            Button("Switch to Scoreboard View") {
-                            isScoreboardViewPresented.toggle()
-                        }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                        .sheet(isPresented: $isScoreboardViewPresented) {
-                            ScoreboardView(deviceData: webSocketDelegate.deviceDataManager.deviceData, socket: socket)
-                                    }
-            
-            Button {
-                sendTestMessage()
-            } label: {
-                Label("Test Test Message", systemImage: "arrow.up")
-            }
-            
-            if webSocketDelegate.isConnected {
-                Button {
-                    getDeviceData()
-                } label: {
-                    Label("Refresh Data", systemImage: "arrow.clockwise")
-                }
-            } else {
-                Button("Reconnect", systemImage: "exclamationmark.triangle") {
-                    socket.connect()
-                }
-            }
-            
-            DeviceDataView(deviceData: webSocketDelegate.deviceDataManager.deviceData)
-            
-            
-            Button("Toggle Websocket Logs", systemImage: "rectangle.dock") {
-                self.showingWebsocketLogs.toggle()
-            }
+            Text("ScoreConnect iOS")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding()
 
+            VStack(spacing: 20) {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.blue) // Adjust color to match the style
+
+                Text("Websocket connected: \(webSocketDelegate.isConnected ? "Yes" : "No")")
+                
+                Toggle("Show WebSocket Logs", isOn: $showingWebsocketLogs)
+
+
+                Button("Switch to Scoreboard View") {
+                    isScoreboardViewPresented.toggle()
+                }
+                .buttonStyle(RoundedButtonStyle())
+
+                Button(action: sendTestMessage) {
+                    Label("Test Test Message", systemImage: "arrow.up")
+                }
+                .buttonStyle(RoundedButtonStyle()) // Apply the custom button style
+
+                // Other buttons and views...
+
+                Button("Credits") {
+                    isShowingCredits.toggle()
+                }
+                .buttonStyle(RoundedButtonStyle()) // Apply the custom button style
+            }
             .padding()
 
-            
             if showingWebsocketLogs {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 5) {
@@ -233,74 +217,28 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            
-            Button("Credits", systemImage: "ellipsis.circle.fill") {
-                isShowingCredits.toggle()
-            }
-            
-            .sheet(isPresented: $isShowingCredits) {
-                VStack(alignment: .center, spacing: 20) {
-                            Image("yorha-no-2-type-b-1")
-                                .resizable()
-                                .frame(width: 100.0, height: 100.0)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .stroke(Color.gray, lineWidth: 5)
-                                )
-                            
-                            Text("Credits")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.gray)
-                            
-                            Text("Created by Necrozma")
-                                .font(.headline)
-                                .foregroundColor(.gray)
-                    
-                            Text("Using Xcode and CocoaPods")
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                                
-                            List(libraries) { library in
-                                VStack(alignment: .leading, spacing: 4) {
-                                    HStack {
-                                        Text(library.name)
-                                            .font(.headline)
-                                        Spacer()
-                                        Link(destination: URL(string: library.url)!) {
-                                            Image(systemName: "link.circle.fill")
-                                                .foregroundColor(.blue)
-                                            }
-                                        }
-                                    Text("Version: \(library.version)")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                    Text(library.description)
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            .listStyle(InsetGroupedListStyle())
-                                
-                            
-                            Spacer()
-                        }
-                        .padding()
-            }
         }
         .onAppear {
-            // handle = Auth.auth().addStateDidChangeListener { auth, user in }
             setupWebSocket()
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            if webSocketDelegate.isConnected {
-                                getDeviceData()
-                            }
-                        }
+                if webSocketDelegate.isConnected {
+                    getDeviceData()
+                }
+            }
         }
         .onDisappear {
-            // Auth.auth().removeStateDidChangeListener(handle!)
+            // Handle onDisappear logic if needed
+        }
+    }
+
+    // Define a custom button style for consistent appearance
+    struct RoundedButtonStyle: ButtonStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
         }
     }
 
