@@ -13,9 +13,8 @@
 		9E3E97592AF9F0D100819481 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97582AF9F0D100819481 /* ContentView.swift */; };
 		9E3E975B2AF9F0F300819481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E975A2AF9F0F300819481 /* Assets.xcassets */; };
 		9E3E975E2AF9F0F300819481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E975D2AF9F0F300819481 /* Preview Assets.xcassets */; };
-		9E3E97682AF9F0F400819481 /* ScoreConnect_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */; };
-		9E3E97722AF9F0F400819481 /* ScoreConnect_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */; };
-		9E3E97742AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */; };
+		9E44E4B12B1CE4AA00A18D97 /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */; };
+		9E44E4B32B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44E4B22B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift */; };
 		9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */; };
 		9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9303442B1BD80B001F85DC /* DeviceDataView.swift */; };
 		9E9303472B1BE628001F85DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9303462B1BE628001F85DC /* GoogleService-Info.plist */; };
@@ -52,10 +51,9 @@
 		9E3E975A2AF9F0F300819481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E3E975D2AF9F0F300819481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E3E97632AF9F0F400819481 /* ScoreConnect MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScoreConnect MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileTests.swift; sourceTree = "<group>"; };
 		9E3E976D2AF9F0F400819481 /* ScoreConnect MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScoreConnect MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileUITests.swift; sourceTree = "<group>"; };
-		9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
+		9E44E4B22B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketDelegateWrapper.swift; sourceTree = "<group>"; };
 		9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
 		9E9303442B1BD80B001F85DC /* DeviceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataView.swift; sourceTree = "<group>"; };
 		9E9303462B1BE628001F85DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -110,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				9E3E97552AF9F0D100819481 /* ScoreConnect Mobile */,
-				9E3E97662AF9F0F400819481 /* ScoreConnect MobileTests */,
-				9E3E97702AF9F0F400819481 /* ScoreConnect MobileUITests */,
 				9E3E97542AF9F0D100819481 /* Products */,
 				07EC290239B16E09A8E07A1B /* Pods */,
 				D54A6B962D584690B96F955A /* Frameworks */,
@@ -131,14 +127,14 @@
 		9E3E97552AF9F0D100819481 /* ScoreConnect Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				9E44E4AF2B1CE49200A18D97 /* Components */,
 				9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */,
 				9E9303462B1BE628001F85DC /* GoogleService-Info.plist */,
 				9E3E97562AF9F0D100819481 /* ScoreConnect_MobileApp.swift */,
 				9E3E97582AF9F0D100819481 /* ContentView.swift */,
 				9E3E975A2AF9F0F300819481 /* Assets.xcassets */,
 				9E3E975C2AF9F0F300819481 /* Preview Content */,
-				9E9303442B1BD80B001F85DC /* DeviceDataView.swift */,
-				9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */,
+				9E44E4B22B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift */,
 			);
 			path = "ScoreConnect Mobile";
 			sourceTree = "<group>";
@@ -151,21 +147,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9E3E97662AF9F0F400819481 /* ScoreConnect MobileTests */ = {
+		9E44E4AF2B1CE49200A18D97 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */,
+				9E9303442B1BD80B001F85DC /* DeviceDataView.swift */,
+				9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */,
+				9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */,
 			);
-			path = "ScoreConnect MobileTests";
-			sourceTree = "<group>";
-		};
-		9E3E97702AF9F0F400819481 /* ScoreConnect MobileUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */,
-				9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */,
-			);
-			path = "ScoreConnect MobileUITests";
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D54A6B962D584690B96F955A /* Frameworks */ = {
@@ -417,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E44E4B32B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift in Sources */,
 				9E3E97592AF9F0D100819481 /* ContentView.swift in Sources */,
 				9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */,
+				9E44E4B12B1CE4AA00A18D97 /* Libraries.swift in Sources */,
 				9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */,
 				9E3E97572AF9F0D100819481 /* ScoreConnect_MobileApp.swift in Sources */,
 			);
@@ -428,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E3E97682AF9F0F400819481 /* ScoreConnect_MobileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +426,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E3E97742AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift in Sources */,
-				9E3E97722AF9F0F400819481 /* ScoreConnect_MobileUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
