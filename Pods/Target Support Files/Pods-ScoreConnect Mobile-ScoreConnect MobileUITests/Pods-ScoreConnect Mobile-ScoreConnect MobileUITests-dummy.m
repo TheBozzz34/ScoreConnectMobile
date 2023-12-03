@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests
+@end

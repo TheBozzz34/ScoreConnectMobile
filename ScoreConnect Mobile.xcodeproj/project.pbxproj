@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5193A816ABD5DD816D63E08F /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5AA1D4818BD2C226B11F19 /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework */; };
+		8F8633A7C6A84E1A03592D3B /* Pods_ScoreConnect_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF4A61D1F757B01B628354 /* Pods_ScoreConnect_Mobile.framework */; };
+		9E3E97572AF9F0D100819481 /* ScoreConnect_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97562AF9F0D100819481 /* ScoreConnect_MobileApp.swift */; };
+		9E3E97592AF9F0D100819481 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97582AF9F0D100819481 /* ContentView.swift */; };
+		9E3E975B2AF9F0F300819481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E975A2AF9F0F300819481 /* Assets.xcassets */; };
+		9E3E975E2AF9F0F300819481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E975D2AF9F0F300819481 /* Preview Assets.xcassets */; };
+		9E3E97682AF9F0F400819481 /* ScoreConnect_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */; };
+		9E3E97722AF9F0F400819481 /* ScoreConnect_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */; };
+		9E3E97742AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */; };
+		9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */; };
+		9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9303442B1BD80B001F85DC /* DeviceDataView.swift */; };
+		9E9303472B1BE628001F85DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9303462B1BE628001F85DC /* GoogleService-Info.plist */; };
+		D7688A0208A78C14E9793A8A /* Pods_ScoreConnect_MobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E3E97642AF9F0F400819481 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E974B2AF9F0D100819481 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E3E97522AF9F0D100819481;
+			remoteInfo = "ScoreConnect Mobile";
+		};
+		9E3E976E2AF9F0F400819481 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E974B2AF9F0D100819481 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E3E97522AF9F0D100819481;
+			remoteInfo = "ScoreConnect Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E13566EEB99FEF6895E4F44 /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		126962D818C03FB0EAED9018 /* Pods-ScoreConnect Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect Mobile.debug.xcconfig"; path = "Target Support Files/Pods-ScoreConnect Mobile/Pods-ScoreConnect Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreConnect_MobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FBAF49993DEBE033C16AC73 /* Pods-ScoreConnect Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect Mobile.release.xcconfig"; path = "Target Support Files/Pods-ScoreConnect Mobile/Pods-ScoreConnect Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		6D5AA1D4818BD2C226B11F19 /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A962169D2FB05528B27565 /* Pods-ScoreConnect MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect MobileTests.release.xcconfig"; path = "Target Support Files/Pods-ScoreConnect MobileTests/Pods-ScoreConnect MobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E3E97532AF9F0D100819481 /* ScoreConnect Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScoreConnect Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3E97562AF9F0D100819481 /* ScoreConnect_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileApp.swift; sourceTree = "<group>"; };
+		9E3E97582AF9F0D100819481 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9E3E975A2AF9F0F300819481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E3E975D2AF9F0F300819481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E3E97632AF9F0F400819481 /* ScoreConnect MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScoreConnect MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileTests.swift; sourceTree = "<group>"; };
+		9E3E976D2AF9F0F400819481 /* ScoreConnect MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScoreConnect MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileUITests.swift; sourceTree = "<group>"; };
+		9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreConnect_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
+		9E9303442B1BD80B001F85DC /* DeviceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataView.swift; sourceTree = "<group>"; };
+		9E9303462B1BE628001F85DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScoreConnect-Mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A90C007F5DAC92E1BC594CDC /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig"; path = "Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2E508FE6A3C2E73654C889A /* Pods-ScoreConnect MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect MobileTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreConnect MobileTests/Pods-ScoreConnect MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1BF4A61D1F757B01B628354 /* Pods_ScoreConnect_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreConnect_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E3E97502AF9F0D100819481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8633A7C6A84E1A03592D3B /* Pods_ScoreConnect_Mobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E97602AF9F0F400819481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7688A0208A78C14E9793A8A /* Pods_ScoreConnect_MobileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E976A2AF9F0F400819481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5193A816ABD5DD816D63E08F /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07EC290239B16E09A8E07A1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				126962D818C03FB0EAED9018 /* Pods-ScoreConnect Mobile.debug.xcconfig */,
+				4FBAF49993DEBE033C16AC73 /* Pods-ScoreConnect Mobile.release.xcconfig */,
+				0E13566EEB99FEF6895E4F44 /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.debug.xcconfig */,
+				A90C007F5DAC92E1BC594CDC /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig */,
+				B2E508FE6A3C2E73654C889A /* Pods-ScoreConnect MobileTests.debug.xcconfig */,
+				70A962169D2FB05528B27565 /* Pods-ScoreConnect MobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E3E974A2AF9F0D000819481 = {
+			isa = PBXGroup;
+			children = (
+				9E3E97552AF9F0D100819481 /* ScoreConnect Mobile */,
+				9E3E97662AF9F0F400819481 /* ScoreConnect MobileTests */,
+				9E3E97702AF9F0F400819481 /* ScoreConnect MobileUITests */,
+				9E3E97542AF9F0D100819481 /* Products */,
+				07EC290239B16E09A8E07A1B /* Pods */,
+				D54A6B962D584690B96F955A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9E3E97542AF9F0D100819481 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E97532AF9F0D100819481 /* ScoreConnect Mobile.app */,
+				9E3E97632AF9F0F400819481 /* ScoreConnect MobileTests.xctest */,
+				9E3E976D2AF9F0F400819481 /* ScoreConnect MobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E3E97552AF9F0D100819481 /* ScoreConnect Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */,
+				9E9303462B1BE628001F85DC /* GoogleService-Info.plist */,
+				9E3E97562AF9F0D100819481 /* ScoreConnect_MobileApp.swift */,
+				9E3E97582AF9F0D100819481 /* ContentView.swift */,
+				9E3E975A2AF9F0F300819481 /* Assets.xcassets */,
+				9E3E975C2AF9F0F300819481 /* Preview Content */,
+				9E9303442B1BD80B001F85DC /* DeviceDataView.swift */,
+				9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */,
+			);
+			path = "ScoreConnect Mobile";
+			sourceTree = "<group>";
+		};
+		9E3E975C2AF9F0F300819481 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E975D2AF9F0F300819481 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E3E97662AF9F0F400819481 /* ScoreConnect MobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E97672AF9F0F400819481 /* ScoreConnect_MobileTests.swift */,
+			);
+			path = "ScoreConnect MobileTests";
+			sourceTree = "<group>";
+		};
+		9E3E97702AF9F0F400819481 /* ScoreConnect MobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E97712AF9F0F400819481 /* ScoreConnect_MobileUITests.swift */,
+				9E3E97732AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift */,
+			);
+			path = "ScoreConnect MobileUITests";
+			sourceTree = "<group>";
+		};
+		D54A6B962D584690B96F955A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF4A61D1F757B01B628354 /* Pods_ScoreConnect_Mobile.framework */,
+				6D5AA1D4818BD2C226B11F19 /* Pods_ScoreConnect_Mobile_ScoreConnect_MobileUITests.framework */,
+				182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E3E97522AF9F0D100819481 /* ScoreConnect Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E3E97772AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect Mobile" */;
+			buildPhases = (
+				7C23F1A05D0EC4EDB3FDECCB /* [CP] Check Pods Manifest.lock */,
+				9E3E974F2AF9F0D100819481 /* Sources */,
+				9E3E97502AF9F0D100819481 /* Frameworks */,
+				9E3E97512AF9F0D100819481 /* Resources */,
+				54C83F4F69D55DF55D03D7C1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ScoreConnect Mobile";
+			productName = "ScoreConnect Mobile";
+			productReference = 9E3E97532AF9F0D100819481 /* ScoreConnect Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E3E97622AF9F0F400819481 /* ScoreConnect MobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E3E977A2AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect MobileTests" */;
+			buildPhases = (
+				B1BF2815791BD8109868393A /* [CP] Check Pods Manifest.lock */,
+				9E3E975F2AF9F0F400819481 /* Sources */,
+				9E3E97602AF9F0F400819481 /* Frameworks */,
+				9E3E97612AF9F0F400819481 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E3E97652AF9F0F400819481 /* PBXTargetDependency */,
+			);
+			name = "ScoreConnect MobileTests";
+			productName = "ScoreConnect MobileTests";
+			productReference = 9E3E97632AF9F0F400819481 /* ScoreConnect MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9E3E976C2AF9F0F400819481 /* ScoreConnect MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E3E977D2AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect MobileUITests" */;
+			buildPhases = (
+				948F9507E750EF2889DC6BEC /* [CP] Check Pods Manifest.lock */,
+				9E3E97692AF9F0F400819481 /* Sources */,
+				9E3E976A2AF9F0F400819481 /* Frameworks */,
+				9E3E976B2AF9F0F400819481 /* Resources */,
+				AC24C4443288A21AE9C6028A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E3E976F2AF9F0F400819481 /* PBXTargetDependency */,
+			);
+			name = "ScoreConnect MobileUITests";
+			productName = "ScoreConnect MobileUITests";
+			productReference = 9E3E976D2AF9F0F400819481 /* ScoreConnect MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E3E974B2AF9F0D100819481 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					9E3E97522AF9F0D100819481 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					9E3E97622AF9F0F400819481 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 9E3E97522AF9F0D100819481;
+					};
+					9E3E976C2AF9F0F400819481 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 9E3E97522AF9F0D100819481;
+					};
+				};
+			};
+			buildConfigurationList = 9E3E974E2AF9F0D100819481 /* Build configuration list for PBXProject "ScoreConnect Mobile" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E3E974A2AF9F0D000819481;
+			productRefGroup = 9E3E97542AF9F0D100819481 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E3E97522AF9F0D100819481 /* ScoreConnect Mobile */,
+				9E3E97622AF9F0F400819481 /* ScoreConnect MobileTests */,
+				9E3E976C2AF9F0F400819481 /* ScoreConnect MobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E3E97512AF9F0D100819481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E3E975E2AF9F0F300819481 /* Preview Assets.xcassets in Resources */,
+				9E3E975B2AF9F0F300819481 /* Assets.xcassets in Resources */,
+				9E9303472B1BE628001F85DC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E97612AF9F0F400819481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E976B2AF9F0F400819481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54C83F4F69D55DF55D03D7C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile/Pods-ScoreConnect Mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile/Pods-ScoreConnect Mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile/Pods-ScoreConnect Mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C23F1A05D0EC4EDB3FDECCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScoreConnect Mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		948F9507E750EF2889DC6BEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC24C4443288A21AE9C6028A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1BF2815791BD8109868393A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScoreConnect MobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E3E974F2AF9F0D100819481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E3E97592AF9F0D100819481 /* ContentView.swift in Sources */,
+				9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */,
+				9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */,
+				9E3E97572AF9F0D100819481 /* ScoreConnect_MobileApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E975F2AF9F0F400819481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E3E97682AF9F0F400819481 /* ScoreConnect_MobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3E97692AF9F0F400819481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E3E97742AF9F0F400819481 /* ScoreConnect_MobileUITestsLaunchTests.swift in Sources */,
+				9E3E97722AF9F0F400819481 /* ScoreConnect_MobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E3E97652AF9F0F400819481 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E3E97522AF9F0D100819481 /* ScoreConnect Mobile */;
+			targetProxy = 9E3E97642AF9F0F400819481 /* PBXContainerItemProxy */;
+		};
+		9E3E976F2AF9F0F400819481 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E3E97522AF9F0D100819481 /* ScoreConnect Mobile */;
+			targetProxy = 9E3E976E2AF9F0F400819481 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9E3E97752AF9F0F400819481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9E3E97762AF9F0F400819481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E3E97782AF9F0F400819481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 126962D818C03FB0EAED9018 /* Pods-ScoreConnect Mobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScoreConnect Mobile/Preview Content\"";
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScoreConnect-Mobile-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E3E97792AF9F0F400819481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FBAF49993DEBE033C16AC73 /* Pods-ScoreConnect Mobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScoreConnect Mobile/Preview Content\"";
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScoreConnect-Mobile-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E3E977B2AF9F0F400819481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E508FE6A3C2E73654C889A /* Pods-ScoreConnect MobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreConnect Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoreConnect Mobile";
+			};
+			name = Debug;
+		};
+		9E3E977C2AF9F0F400819481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70A962169D2FB05528B27565 /* Pods-ScoreConnect MobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreConnect Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoreConnect Mobile";
+			};
+			name = Release;
+		};
+		9E3E977E2AF9F0F400819481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E13566EEB99FEF6895E4F44 /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ScoreConnect Mobile";
+			};
+			name = Debug;
+		};
+		9E3E977F2AF9F0F400819481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A90C007F5DAC92E1BC594CDC /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG4PDHYM9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.necrozma.ScoreConnect-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ScoreConnect Mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E3E974E2AF9F0D100819481 /* Build configuration list for PBXProject "ScoreConnect Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E3E97752AF9F0F400819481 /* Debug */,
+				9E3E97762AF9F0F400819481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E3E97772AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E3E97782AF9F0F400819481 /* Debug */,
+				9E3E97792AF9F0F400819481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E3E977A2AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect MobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E3E977B2AF9F0F400819481 /* Debug */,
+				9E3E977C2AF9F0F400819481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E3E977D2AF9F0F400819481 /* Build configuration list for PBXNativeTarget "ScoreConnect MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E3E977E2AF9F0F400819481 /* Debug */,
+				9E3E977F2AF9F0F400819481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E3E974B2AF9F0D100819481 /* Project object */;
+}
