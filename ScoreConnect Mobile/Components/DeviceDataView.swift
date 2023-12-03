@@ -1,3 +1,10 @@
+//
+//  WebSocketDelegateWrapper.swift
+//  ScoreConnect Mobile
+//
+//  Created by Ethan James on 12/2/23.
+//
+
 import SwiftUI
 
 struct DeviceDataView: View {
