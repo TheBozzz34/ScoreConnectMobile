@@ -101,9 +101,13 @@ struct TeamScoreView: View {
     let teamName: String
     let score: String
     
+    func editTeamName() {
+        
+    }
+    
     var body: some View {
         VStack {
-            Text(teamName)
+            Button(teamName, systemImage: "square.and.pencil", action: editTeamName)
                 .font(.headline)
                 .foregroundColor(.white)
             Text(score)
