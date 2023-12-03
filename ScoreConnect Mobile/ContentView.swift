@@ -165,6 +165,10 @@ struct ContentView: View {
     func printDeviceData() {
         print("Device Data: \(webSocketDelegate.deviceDataManager.deviceData)")
     }
+    
+    func connectWs() {
+        socket.connect()
+    }
 
 
 
@@ -182,12 +186,21 @@ struct ContentView: View {
 
                 Text("Websocket connected: \(webSocketDelegate.isConnected ? "Yes" : "No")")
                 
-                Toggle("Show WebSocket Logs", isOn: $showingWebsocketLogs)
-
+                Toggle("Show WebSocket Logs", isOn: $showingWebsocketLogs).toggleStyle(.button)
+                
+                if !webSocketDelegate.isConnected {
+                    Button(action: connectWs) {
+                        Label("Reconnect", systemImage: "exclamationmark.triangle")
+                            .foregroundColor(.red)
+                    }
+                }
 
                 Button("Switch to Scoreboard View") {
                     isScoreboardViewPresented.toggle()
                 }
+                .sheet(isPresented: $isScoreboardViewPresented) {
+                                            ScoreboardView(deviceData: webSocketDelegate.deviceDataManager.deviceData, socket: socket)
+                                                    }
                 .buttonStyle(RoundedButtonStyle())
 
                 Button(action: sendTestMessage) {
@@ -195,12 +208,58 @@ struct ContentView: View {
                 }
                 .buttonStyle(RoundedButtonStyle()) // Apply the custom button style
 
-                // Other buttons and views...
+                .sheet(isPresented: $isShowingCredits) {
+                              VStack(alignment: .center, spacing: 20) {
+                                          Image("yorha-no-2-type-b-1")
+                                              .resizable()
+                                              .frame(width: 100.0, height: 100.0)
+                                              .cornerRadius(50)
+                                              .overlay(
+                                                  RoundedRectangle(cornerRadius: 50)
+                                                      .stroke(Color.gray, lineWidth: 5)
+                                              )
+                                          
+                                          Text("Credits")
+                                              .font(.title)
+                                              .fontWeight(.bold)
+                                              .foregroundColor(.gray)
+                                          
+                                          Text("Created by Necrozma")
+                                              .font(.headline)
+                                              .foregroundColor(.gray)
+                                  
+                                          Text("Using Xcode and CocoaPods")
+                                              .font(.caption)
+                                              .foregroundColor(.gray)
+                                              
+                                          List(libraries) { library in
+                                              VStack(alignment: .leading, spacing: 4) {
+                                                  HStack {
+                                                      Text(library.name)
+                                                          .font(.headline)
+                                                      Spacer()
+                                                      Link(destination: URL(string: library.url)!) {
+                                                          Image(systemName: "link.circle.fill")
+                                                              .foregroundColor(.blue)
+                                                          }
+                                                      }
+                                                  Text("Version: \(library.version)")
+                                                      .font(.subheadline)
+                                                      .foregroundColor(.gray)
+                                                  Text(library.description)
+                                                      .font(.footnote)
+                                                      .foregroundColor(.gray)
+                                              }
+                                          }
+                                          .listStyle(InsetGroupedListStyle())
+                                              
+                                          
+                                          Spacer()
+                                      }
+                                      .padding()
+                          }
 
-                Button("Credits") {
-                    isShowingCredits.toggle()
-                }
-                .buttonStyle(RoundedButtonStyle()) // Apply the custom button style
+
             }
             .padding()
 
@@ -217,6 +276,11 @@ struct ContentView: View {
                 }
                 .padding()
             }
+            
+            Button("Credits") {
+                isShowingCredits.toggle()
+            }
+            .buttonStyle(RoundedButtonStyle())
         }
         .onAppear {
             setupWebSocket()
@@ -227,7 +291,6 @@ struct ContentView: View {
             }
         }
         .onDisappear {
-            // Handle onDisappear logic if needed
         }
     }
 
