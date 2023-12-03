@@ -1,5 +1,5 @@
 //
-//  WebSocketDelegateWrapper.swift
+//  ConentView.swift
 //  ScoreConnect Mobile
 //
 //  Created by Ethan James on 11/6/23.
