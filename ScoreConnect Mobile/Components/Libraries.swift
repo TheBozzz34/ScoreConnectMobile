@@ -22,7 +22,8 @@ struct Libraries: View {
         Library(name: "Starscream", version: "4.0.6", description: "Starscream is a conforming WebSocket (RFC 6455) library in Swift.", url: "https://github.com/daltoniam/Starscream"),
         Library(name: "FirebaseAnalytics", version: "10.18.0", description: "Firebase Analytics is a free, out-of-the-box analytics solution that inspires actionable insights based on app usage and user engagement.", url: "https://firebase.google.com"),
         Library(name: "FirebaseCore", version: "10.18.0", description: "Firebase is an app development platform with tools to help you build, grow and monetize your app", url: "firebase.google.com"),
-        Library(name: "ExytePopupView", version: "2.8.3", description: "Toasts, alerts and popups library written with SwiftUI", url: "https://github.com/exyte/PopupView")
+        Library(name: "ExytePopupView", version: "2.8.3", description: "Toasts, alerts and popups library written with SwiftUI", url: "https://github.com/exyte/PopupView"),
+        Library(name: "GoogleSignIn", version: "7.0.0", description: "Get users into your apps quickly and securely, using a registration system they already use and trust—their Google account.", url: "https://github.com/google/GoogleSignIn-iOS")
         ]
     var body: some View {
         VStack(alignment: .center, spacing: 20) {

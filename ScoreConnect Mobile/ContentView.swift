@@ -10,7 +10,8 @@ import Starscream
 import FirebaseCore
 import Foundation
 import FirebaseAnalytics
-
+import FirebaseAuth
+import GoogleSignIn
 
 struct ContentView: View {
     @StateObject private var webSocketDelegate = WebSocketDelegateWrapper()
@@ -18,8 +19,10 @@ struct ContentView: View {
     @State private var showingWebsocketLogs = false
     @State private var isScoreboardViewPresented = false
     @State private var isShowingCredits = false
-    // var handle: AuthStateDidChangeListenerHandle?
-
+    @State private var isShowingGoogleLogin = false
+    @State private var handle: AuthStateDidChangeListenerHandle?
+    @StateObject var profileImageViewModel = ProfileImageViewModel()
+    var appUser: GIDGoogleUser?
     
     func sendTestMessage() {
         let testJson: [String: Any] = [
@@ -67,10 +70,32 @@ struct ContentView: View {
         socket.connect()
     }
 
-
-
     var body: some View {
         VStack {
+            if let displayName = Auth.auth().currentUser?.displayName {
+                if let image = profileImageViewModel.profileImage {
+                                Image(uiImage: image)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 60, height: 60)
+                                            .clipShape(Circle())
+                                            .offset(x: UIScreen.main.bounds.width - 250, y: -5)
+                            } else {
+                                Text("Loading profile image...")
+                                    .onAppear {
+                                        profileImageViewModel.fetchImage()
+                                    }
+                            }
+                            Text("Hello, \(displayName)")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .padding()
+                        } else {
+                            Text("Hello, Guest")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .padding()
+                        }
             Text("ScoreConnect iOS")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -109,17 +134,29 @@ struct ContentView: View {
                 .sheet(isPresented: $isShowingCredits) {
                               Libraries()
                 }
+        
             
-            Button("Send Test Analytics Event") {
-                Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-                  AnalyticsParameterItemID: "test",
-                  AnalyticsParameterItemName: "test",
-                  AnalyticsParameterContentType: "cont",
-                ])
-
-
+            if Auth.auth().currentUser?.uid != nil {
+                Button("Logout") {
+                    do {
+                      try Auth.auth().signOut()
+                    } catch let signOutError as NSError {
+                      print("Error signing out: %@", signOutError)
+                    }
+                }
+            } else {
+                 Button("Login") {
+                     isShowingGoogleLogin = true
+                 }.sheet(isPresented: $isShowingGoogleLogin, content: {
+                     NavigationView {
+                                 GoogleSignInViewController()
+                                     .edgesIgnoringSafeArea(.all)
+                                     .navigationBarTitle("Google Sign In")
+                             }
+                     
+                 })
+                 .padding()
             }
-            .padding()
 
             if showingWebsocketLogs {
                 ScrollView {
@@ -141,6 +178,9 @@ struct ContentView: View {
             .buttonStyle(RoundedButtonStyle())
         }
         .onAppear {
+            handle = Auth.auth().addStateDidChangeListener { auth, user in
+            }
+    
             setupWebSocket()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 if webSocketDelegate.isConnected {
@@ -149,6 +189,7 @@ struct ContentView: View {
             }
         }
         .onDisappear {
+            Auth.auth().removeStateDidChangeListener(handle!)
         }
     }
 

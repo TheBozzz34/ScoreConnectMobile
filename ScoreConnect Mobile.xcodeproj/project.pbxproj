@@ -19,6 +19,8 @@
 		9E739A092B1CEEEA00DB94C4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E739A082B1CEEEA00DB94C4 /* AdSupport.framework */; };
 		9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9303442B1BD80B001F85DC /* DeviceDataView.swift */; };
 		9E9303472B1BE628001F85DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9303462B1BE628001F85DC /* GoogleService-Info.plist */; };
+		9ED706A32B1CF71900C35577 /* GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED706A22B1CF71900C35577 /* GoogleSignIn.swift */; };
+		9ED706A62B1D5F2700C35577 /* ProfileImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED706A52B1D5F2600C35577 /* ProfileImageViewModel.swift */; };
 		D7688A0208A78C14E9793A8A /* Pods_ScoreConnect_MobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182AFD0AB52BB775B3032A18 /* Pods_ScoreConnect_MobileTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		9E739A082B1CEEEA00DB94C4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E9303442B1BD80B001F85DC /* DeviceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataView.swift; sourceTree = "<group>"; };
 		9E9303462B1BE628001F85DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9ED706A22B1CF71900C35577 /* GoogleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignIn.swift; sourceTree = "<group>"; };
+		9ED706A52B1D5F2600C35577 /* ProfileImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewModel.swift; sourceTree = "<group>"; };
 		9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScoreConnect-Mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A90C007F5DAC92E1BC594CDC /* Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig"; path = "Target Support Files/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests/Pods-ScoreConnect Mobile-ScoreConnect MobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2E508FE6A3C2E73654C889A /* Pods-ScoreConnect MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreConnect MobileTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreConnect MobileTests/Pods-ScoreConnect MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		9E3E97552AF9F0D100819481 /* ScoreConnect Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				9ED706A42B1D5F0100C35577 /* Models */,
 				9E44E4AF2B1CE49200A18D97 /* Components */,
 				9EED51632B1BE95D005E991C /* ScoreConnect-Mobile-Info.plist */,
 				9E9303462B1BE628001F85DC /* GoogleService-Info.plist */,
@@ -156,8 +161,17 @@
 				9E9303442B1BD80B001F85DC /* DeviceDataView.swift */,
 				9E4FDE3C2B1BFECE002B86A0 /* ScoreBoardView.swift */,
 				9E44E4B02B1CE4AA00A18D97 /* Libraries.swift */,
+				9ED706A22B1CF71900C35577 /* GoogleSignIn.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9ED706A42B1D5F0100C35577 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9ED706A52B1D5F2600C35577 /* ProfileImageViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D54A6B962D584690B96F955A /* Frameworks */ = {
@@ -410,11 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED706A32B1CF71900C35577 /* GoogleSignIn.swift in Sources */,
 				9E44E4B32B1CE5A600A18D97 /* WebSocketDelegateWrapper.swift in Sources */,
 				9E3E97592AF9F0D100819481 /* ContentView.swift in Sources */,
 				9E9303452B1BD80B001F85DC /* DeviceDataView.swift in Sources */,
 				9E44E4B12B1CE4AA00A18D97 /* Libraries.swift in Sources */,
 				9E4FDE3D2B1BFECE002B86A0 /* ScoreBoardView.swift in Sources */,
+				9ED706A62B1D5F2700C35577 /* ProfileImageViewModel.swift in Sources */,
 				9E3E97572AF9F0D100819481 /* ScoreConnect_MobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
